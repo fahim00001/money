@@ -23,8 +23,12 @@ document.getElementById('calculator-button').addEventListener('click',function()
    const rentCostAmount = getinputId('rent');
    //colthes expenes
    const colthesCostAmount = getinputId('clothes');
-
-     ///////////////expenses calculation/////////////
+   
+   if(incomeAmount< 0 || foodCostAmount < 0 || rentCostAmount < 0){
+        console.log('please enter positive value');
+   }
+   else {
+         ///////////////expenses calculation/////////////
      const totalExpensesAmount = foodCostAmount + rentCostAmount + colthesCostAmount;
      
      const totalExpenses = getTextFieldId('total-expence',totalExpensesAmount);
@@ -49,5 +53,6 @@ document.getElementById('calculator-button').addEventListener('click',function()
         const remaingBalancefield = getTextFieldId('remaining-balance-field',remaingBalanceAmount);
     
     });
+   }
 });
 
