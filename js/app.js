@@ -6,21 +6,17 @@ function getinputid(inputId){
 }
 
 document.getElementById('calculator-button').addEventListener('click',function(){
-   const incomeInput = document.getElementById('income-input');
-   ;
-   const incomeAmount = incomeInput.value;
-   console.log(incomeAmount);
    
-   const foodInput = document.getElementById('food-input');
-   const foodExpenseAmount = foodInput.value;
-   console.log(foodExpenseAmount);
+   const incomeAmount = getinputid('income');
+    console.log(incomeAmount)
+   
+   const foodInput = getinputid('food');
+   console.log(foodInput)
 
-   const rentInput = document.getElementById('rent-input');
-   const rentExpenseAmount = rentInput.value;
-   console.log(rentExpenseAmount);
+   const rentInput = getinputid('rent');
+   console.log(rentInput)
 
-   const colthesInput = document.getElementById('clothes-input');
-   const colthExpenseAmount = colthesInput.value;
-   console.log(colthExpenseAmount);
+   const colthesInput = getinputid('clothes');
+   console.log(colthesInput);
    
 });
