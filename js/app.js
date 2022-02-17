@@ -32,3 +32,9 @@ document.getElementById('calculator-button').addEventListener('click',function()
 
 
 });
+
+document.getElementById('saving-input-btn').addEventListener('click',function(){
+    const incomeAmount = getinputid('income');
+    const savingPercentageFeild = getinputid('saving');
+    
+})
