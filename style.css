@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;500;700&display=swap');
-
-body{
-    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
     font-family: 'Poppins', sans-serif;
-    font-family: 'Lobster', cursive;
-
+    
 }
  /* input field customize */
  
@@ -14,6 +11,8 @@ body{
     border: 0px solid;
     border-radius: 10px;
 }
+
+/* error massage handle */
 .custom-erro-design{
   display: none;
   align-items: center;
