@@ -17,10 +17,18 @@ document.getElementById('calculator-button').addEventListener('click',function()
    //colthes expenes
    const colthesCostAmount = getinputid('clothes');
 
+   ///////////////expenses calculation/////////////
+    const totalExpensesAmount = foodCostAmount + rentCostAmount +colthesCostAmount;
+
+    ///show total expence and balance 
+    
+   const totalExpenses =document.getElementById('total-expence');
+   totalExpenses.innerText = totalExpensesAmount;
+
+   const totalBalanceAmount = incomeAmount - totalExpensesAmount;
+
+   const totalBalance = document.getElementById('total-balance');
+   totalBalance.innerText = totalBalanceAmount;
 
 
-   ///////////////expenses calculatio/////////////
-    const totalExpenses = foodCostAmount + rentCostAmount +colthesCostAmount;
-    console.log(totalExpenses);
-   
 });

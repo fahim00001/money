@@ -28,10 +28,11 @@
         </div>
       </div>
       <div class="col-lg-6 col-12">
+
         <div class="p-3 border bg-light d-flex flex-column align-items-center  ">
           <h4 class="fw-bolder  ">Income</h4>
           <h6 class="fs-5 ">Income : 
-            <input id="income-input" class="ms-2 custom-inputField" type="text" name="" id="">
+            <input id="income-input" class="ms-2 custom-inputField" type="text" name="" >
           </h6>
           <h4 class="fw-bolder">Expenses</h4>
           <h6 class="fs-5 ">Food:
@@ -43,10 +44,17 @@
           <h6 class="fs-5 ">Clothes:
             <input id="clothes-input" class="ms-2 custom-inputField" type="text" name="" >
           </h6>
+                  <!-- calculation button -->
           <button id="calculator-button" type="button" class="btn btn-primary my-2 ">calculator</button>
 
-          <h4 class="my-4">Total Expenses:<span>00</span> </h4>
-          <h4 class="my-2">Blance:<span>00</span> </h4>
+                  <!-- total expence -->
+
+          <h4 class="my-4">Total Expenses:<span id="total-expence">00</span> </h4>
+                    <!-- total balance -->
+
+          <h4 class="my-2">Balance:<span id="total-balance" >00</span> </h4>
+                
+                <!-- saving balance  -->
 
           <h4 class="d-flex align-items-center my-4 ms-5">
             save: <input class="w-25 text-center mx-3 custom-inputField" type="text" value=""> % <button type="button"
