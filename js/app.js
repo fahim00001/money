@@ -37,4 +37,6 @@ document.getElementById('saving-input-btn').addEventListener('click',function(){
     const incomeAmount = getinputid('income');
     const savingPercentageFeild = getinputid('saving');
     
+    const savingAmount = incomeAmount * (savingPercentageFeild /100)
+    console.log(savingAmount);
 })
