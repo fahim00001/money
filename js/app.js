@@ -23,17 +23,23 @@ document.getElementById('calculator-button').addEventListener('click',function()
    const rentCostAmount = getinputId('rent');
    //colthes expenes
    const colthesCostAmount = getinputId('clothes');
-   
-   if(incomeAmount< 0 || foodCostAmount < 0 || rentCostAmount < 0){
+   if ( isNaN(incomeAmount) ||  isNaN(foodCostAmount) || isNaN(rentCostAmount)){
+    console.log('please enter a number')
+   }
+   else if(incomeAmount < 0 || foodCostAmount < 0 || rentCostAmount < 0) {
         console.log('please enter positive value');
    }
+   
    else {
          ///////////////expenses calculation/////////////
      const totalExpensesAmount = foodCostAmount + rentCostAmount + colthesCostAmount;
-     
-     const totalExpenses = getTextFieldId('total-expence',totalExpensesAmount);
 
-        //total balance caculation
+     if(totalExpensesAmount > incomeAmount ){
+         console.log('your income is low')
+     }
+     else{
+     const totalExpenses = getTextFieldId('total-expence',totalExpensesAmount);
+        //total balance caculation//
      const totalBalanceAmount = incomeAmount - totalExpensesAmount;
 
      const totalBalance = getTextFieldId('total-balance',totalBalanceAmount);
@@ -53,6 +59,7 @@ document.getElementById('calculator-button').addEventListener('click',function()
         const remaingBalancefield = getTextFieldId('remaining-balance-field',remaingBalanceAmount);
     
     });
+     }
    }
 });
 
