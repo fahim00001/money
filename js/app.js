@@ -1,22 +1,26 @@
 ///function declaration for input values
 function getinputid(inputId){
     const getmoneyInput = document.getElementById(inputId +"-input");
-    const inputValues = getmoneyInput.value;
-    return inputValues;
+    const inputAmountText = getmoneyInput.value;
+    const amountValue = parseFloat(inputAmountText);
+    return amountValue;
 }
 
+
 document.getElementById('calculator-button').addEventListener('click',function(){
-   
+    //income amount
    const incomeAmount = getinputid('income');
-    console.log(incomeAmount)
-   
-   const foodInput = getinputid('food');
-   console.log(foodInput)
+    //food expenes
+   const foodCostAmount= getinputid('food');
+   //rent expenes
+   const rentCostAmount = getinputid('rent');
+   //colthes expenes
+   const colthesCostAmount = getinputid('clothes');
 
-   const rentInput = getinputid('rent');
-   console.log(rentInput)
 
-   const colthesInput = getinputid('clothes');
-   console.log(colthesInput);
+
+   ///////////////expenses calculatio/////////////
+    const totalExpenses = foodCostAmount + rentCostAmount +colthesCostAmount;
+    console.log(totalExpenses);
    
 });
