@@ -14,3 +14,12 @@ body{
     border: 0px solid;
     border-radius: 10px;
 }
+.custom-erro-design{
+  display: none;
+  align-items: center;
+  width:27%;
+  color: white;
+  padding: 1% ;
+  font-size:25px;
+  background-color: rgba(245, 3, 3, 0.678);
+}

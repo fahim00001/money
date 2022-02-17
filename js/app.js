@@ -35,7 +35,7 @@ document.getElementById('calculator-button').addEventListener('click',function()
      const totalExpensesAmount = foodCostAmount + rentCostAmount + colthesCostAmount;
 
      if(totalExpensesAmount > incomeAmount ){
-         console.log('your income is low')
+          console.log('your income is low')
      }
      else{
      const totalExpenses = getTextFieldId('total-expence',totalExpensesAmount);
