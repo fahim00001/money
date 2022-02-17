@@ -23,19 +23,31 @@ document.getElementById('calculator-button').addEventListener('click',function()
    const rentCostAmount = getinputId('rent');
    //colthes expenes
    const colthesCostAmount = getinputId('clothes');
+    const errorTextHandle = document.getElementById('number-text-handle');
+    const errorpositiveNumber= document.getElementById('positive-number-handle');
+    const errorincomeAmount = document.getElementById('lowIncome-handle');
+
+////string error handling 
    if ( isNaN(incomeAmount) ||  isNaN(foodCostAmount) || isNaN(rentCostAmount)){
-    console.log('please enter a number')
+    errorTextHandle.style.display = 'block';
+    errorpositiveNumber.style.display = 'none';
+    errorincomeAmount.style.display = 'none';
    }
+///positive number error handling 
    else if(incomeAmount < 0 || foodCostAmount < 0 || rentCostAmount < 0) {
-        console.log('please enter positive value');
+     errorpositiveNumber.style.display = 'block';
+     errorTextHandle.style.display = 'none';
+     errorincomeAmount.style.display = 'none';
    }
    
    else {
          ///////////////expenses calculation/////////////
      const totalExpensesAmount = foodCostAmount + rentCostAmount + colthesCostAmount;
-
+        ///low income error handling 
      if(totalExpensesAmount > incomeAmount ){
-          console.log('your income is low')
+        errorincomeAmount.style.display = 'block';
+        errorTextHandle.style.display = 'none';
+        errorpositiveNumber.style.display = 'none';
      }
      else{
      const totalExpenses = getTextFieldId('total-expence',totalExpensesAmount);
